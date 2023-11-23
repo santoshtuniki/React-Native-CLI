@@ -42,24 +42,34 @@ const App = () => {
 
 	return (
 		<View>
-			<Text style={styles.header}>
-				Hello React Native
-			</Text>
+			<View>
+				<Text style={styles.header}>
+					Hello React Native
+				</Text>
 
-			<Text style={styles.para}>
-				Like
-			</Text>
-			<Button title="Like" />
+				<Text style={styles.para}>
+					Like
+				</Text>
+				<Button title="Like" />
 
-			<Text style={[styles.para, { fontWeight: 800, textDecorationLine: 'underline', }]}>
-				Share
-			</Text>
-			<Button title="Share" color="#841584" />
+				<Text style={[styles.para, { fontWeight: 800, textDecorationLine: 'underline', }]}>
+					Share
+				</Text>
+				<Button title="Share" color="#841584" />
 
-			<Text style={[styles.para, styles.slant]}>
-				Subscribe
-			</Text>
-			<Button title="Subscribe" />
+				<Text style={[styles.para, styles.slant]}>
+					Subscribe
+				</Text>
+				<Button title="Subscribe" />
+			</View>
+
+			<View style={styles.container}>
+				<Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
+					style={styles.icon} />
+
+				<Image source={require('./images/roar.jpg')}
+					style={styles.icon} />
+			</View>
 		</View>
 	);
 };
