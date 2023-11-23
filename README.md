@@ -6,7 +6,7 @@
 
 ##### Run Metro:
 
-    npm start
+	npm start
 
 
 #### Let Metro Bundler run in its own terminal. Open a new terminal inside your React Native project folder. 
@@ -14,20 +14,29 @@
 
 ##### Run App command:
 
-    npx react-native run-android 
+	npx react-native run-android 
 
-            (OR)
+			(OR)
 
-    npm run android
+	npm run android
 
 ##### If everything is set up correctly, you should see your new app running in your Android emulator shortly.
 
 ##### Now that you have successfully run the app, let's modify it.
 
-    1.  Open App.tsx in your text editor of choice and edit some lines.
+	1.  Open App.tsx in your text editor of choice and edit some lines.
 
-    2.  Press the R key twice 
+	2.  Press the R key twice 
 
-                (OR)
-        
-        select Reload from the Dev Menu (Ctrl + M) to see your changes!
+				(OR)
+		
+		select Reload from the Dev Menu (Ctrl + M) to see your changes!
+
+##### To run in Javascript, change .eslintrc.js:
+
+	module.exports = {
+		"extends": "airbnb",
+		"plugins": [
+			"react"
+		]
+	};
