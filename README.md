@@ -32,7 +32,7 @@
 		
 		select Reload from the Dev Menu (Ctrl + M) to see your changes!
 
-##### To run in Javascript, change .eslintrc.js:
+##### Change .eslintrc.js:
 
 	module.exports = {
 		"extends": "airbnb",
@@ -57,5 +57,3 @@
 	6.	.eslintrc.js
 
 	7.	ios and android folders
-
-#####
