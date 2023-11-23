@@ -50,23 +50,35 @@ const App = () => {
 				<Text style={styles.para}>
 					Like
 				</Text>
-				<Button title="Like" />
+				<Button
+					title="Like"
+					onPress={() => handlePress('Like')}
+				/>
 
 				<Text style={[styles.para, { fontWeight: 800, textDecorationLine: 'underline', }]}>
 					Share
 				</Text>
-				<Button title="Share" color="#841584" />
+				<Button
+					title="Share"
+					color="#841584"
+					onPress={() => handlePress('Share')}
+				/>
 
 				<Text style={[styles.para, styles.slant]}>
 					Subscribe
 				</Text>
-				<Button title="Subscribe" />
+				<Button
+					title="Subscribe"
+					onPress={() => handlePress('Subscribe')}
+				/>
 			</View>
 
 			<View style={styles.container}>
+				{/* For Network Images */}
 				<Image source={{ uri: 'https://reactjs.org/logo-og.png' }}
 					style={styles.icon} />
 
+				{/* For Local Images */}
 				<Image source={require('./images/roar.jpg')}
 					style={styles.icon} />
 			</View>
