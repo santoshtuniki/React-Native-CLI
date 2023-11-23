@@ -65,4 +65,31 @@ export const styles = StyleSheet.create({
             backgroundColor: '#000000c0',
         },
     },
+
+    section: {
+        container: {
+            flex: 1,
+            paddingTop: StatusBar.currentHeight,
+            marginHorizontal: 16,
+        },
+        item: {
+            backgroundColor: '#f9c2ff',
+            padding: 20,
+            marginVertical: 8,
+        },
+        header: {
+            fontSize: 32,
+            backgroundColor: '#fff',
+        },
+        title: {
+            fontSize: 24,
+        },
+    },
+
+    input: {
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+    },
 });

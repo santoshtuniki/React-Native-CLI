@@ -6,6 +6,8 @@ import AboutScreen from './components/About';
 import PictureScreen from './components/Pictures';
 import HomeScreen from './components/Home';
 import FlatScreen from './components/Flat';
+import SectionScreen from './components/Section';
+import InputScreen from './components/Input';
 
 /*
 	createNativeStackNavigator is a function that returns an object containing 2 properties: 
@@ -22,6 +24,8 @@ const App = () => {
 				<Stack.Screen name="About" component={AboutScreen} />
 				<Stack.Screen name="Pictures" component={PictureScreen} />
 				<Stack.Screen name="FlatList" component={FlatScreen} />
+				<Stack.Screen name="SectionList" component={SectionScreen} />
+				<Stack.Screen name="TextInput" component={InputScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	)

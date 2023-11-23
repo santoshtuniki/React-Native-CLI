@@ -1,0 +1,85 @@
+NavigationContainer:
+	1.	A component which manages our navigation tree and contains the navigation state.
+	2.	In a typical React Native app, the NavigationContainer should be only used once in your app at the root.
+
+
+createNativeStackNavigator() is a function that returns an object containing 2 properties: 
+	1.	Screen 
+                --> 'name' property to define Route name
+                --> 'component' property to call the desired component
+	2.	Navigator.
+                --> The Navigator should contain Screen elements as its children to define the configuration for routes.
+
+
+Moving between screens:
+    1.  navigation  
+                -->  the navigation prop is passed in to every screen componentin the native stack navigator.
+    2.  navigation.navigate(RouteName)  
+                -->  to move the user to desired screen.
+    3.  navigation.goBack()     
+                -->    to return to "previous screen".
+    4.  navigation.popToTop()   
+                -->     to return to "first screen" at the top of the stack.
+
+
+SafeAreaView:
+    1.  The purpose of SafeAreaView is to render content within the safe area "boundaries of a device". 
+    2.  It is currently only applicable to iOS devices with iOS version 11 or later.
+
+
+FlatList:
+    1.  data
+                -->     Data we want to render, probably an Array.
+    2.  renderItem
+                -->     How to render each element of the data.
+    3.  keyExtractor    
+                -->     Tells the list to use the ids for the react keys instead of the default key property.
+    4.  extraData={selectedId}
+                -->     Ensure FlatList itself will re-render when the state changes. 
+
+SectionList:
+    1.  sections
+                -->     Data we want to render, probably an Array.
+    2.  renderItem
+                -->     How to render each element of the data.
+    3.  keyExtractor    
+                -->     Tells the list to use the ids for the react keys instead of the default key property.
+    4.  renderSectionHeader
+                -->     Specify the function that renders the headers for each section in the list. 
+
+
+In summary: (For rendering lists):
+    A.  FlatList:
+            1.  FlatList is used to render a simple, flat list of items. 
+            2.  It's suitable for long lists where all items have the same structure and you want to render them efficiently.
+
+    B.  SectionList:
+            1.  SectionList is used when you have a list with categorized or sectioned data. 
+            2.  It allows you to render sections with headers and individual items within each section. 
+
+
+
+<ScrollView> vs <FlatList> - which one to use?
+
+    1.  ScrollView renders all its react child components at "once", but this has a performance downside.
+        This leads to slow rendering and increased memory usage.
+
+    2.  FlatList renders items "lazily", when they are about to appear, and removes items that scroll way off screen to save memory and processing time.
+        FlatList is also handy if you want to render separators between your items, multiple columns, infinite scroll loading, or any number of other features it supports out of the box.
+
+
+StatusBar
+    1.  Component to control the app's status bar. 
+    2.  The status bar is the zone, typically at the top of the screen, that displays the current time, Wi-Fi and 
+        cellular network information, battery level and/or other status icons.
+
+TextInput
+    1.  A foundational component for inputting text into the app via a keyboard. 
+    2.  Some props are only available with multiline={true/false}. 
+    3.  Like border styles that apply to only one side of the element, will not be applied if multiline=true
+                (e.g., borderBottomColor, borderLeftWidth, etc.)
+    4.  keyboardType
+                -->     Decides the type of virtual keyboard to be displayed.
+
+VirtualizedList
+    1.  Base implementation for the more convenient <FlatList> and <SectionList> components

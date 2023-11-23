@@ -57,10 +57,10 @@ const FlatScreen = ({ navigation }) => {
                 keyExtractor={item => item.id}
                 extraData={selectedId}
             />
-            <View style={{ marginTop: 40 }}>
+            <View style={{ marginBottom: 40 }}>
                 <Button
-                    title='Return Home'
-                    onPress={() => navigation.popToTop()}
+                    title='Next'
+                    onPress={() => navigation.navigate('SectionList')}
                 />
             </View>
         </SafeAreaView>
