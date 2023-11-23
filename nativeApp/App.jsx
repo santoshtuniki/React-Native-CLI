@@ -40,6 +40,10 @@ const App = () => {
 		Alert.alert(`${title} clicked.`)
 	}
 
+	const onPressButton = () => {
+		Alert.alert('GURRR...')
+	}
+
 	return (
 		<View>
 			<View>
@@ -79,8 +83,10 @@ const App = () => {
 					style={styles.icon} />
 
 				{/* For Local Images */}
-				<Image source={require('./images/roar.jpg')}
-					style={styles.icon} />
+				<TouchableHighlight onPress={() => onPressButton()} underlayColor="white">
+					<Image source={require('./images/roar.jpg')}
+						style={styles.icon} />
+				</TouchableHighlight>
 			</View>
 		</View>
 	);
