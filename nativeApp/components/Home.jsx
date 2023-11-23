@@ -1,27 +1,31 @@
-import React from "react";
-import { Button, Text, View } from "react-native";
-import { styles } from "./styles";
+import React from 'react';
+import {
+    ImageBackground,
+    Text,
+    View,
+    Button,
+} from 'react-native';
+import { styles } from './styles';
 
-const HomeScreen = ({ navigation }) => {
-    return (
-        <View style={styles.middle}>
-            <Text style={{ textAlign: 'center', marginBottom: 40 }}>
-                Hi! Welcome to Native App
+const { home } = styles;
+
+const image = { uri: 'https://legacy.reactjs.org/logo-og.png' };
+
+const HomeScreen = ({ navigation }) => (
+    <View style={home.container}>
+        <ImageBackground source={image} resizeMode="cover" style={home.image}>
+            <Text style={home.text}>
+                WELCOME
             </Text>
+        </ImageBackground>
 
+        <View style={{ marginBottom: 40 }}>
             <Button
                 title='Next'
                 onPress={() => navigation.navigate('About')}
             />
         </View>
-    )
-};
+    </View>
+);
 
 export default HomeScreen;
-
-/*	
-    'navigation' prop is passed in to every "screen component" in the native stack navigator.
-
-    navigation.navigate(RouteName)      -->      to move the user to that screen.
-
-*/

@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, StatusBar } from "react-native";
 
 export const styles = StyleSheet.create({
     header: {
@@ -31,5 +31,38 @@ export const styles = StyleSheet.create({
     },
     middle: {
         paddingTop: '10%',
-    }
+    },
+
+    flat: {
+        container: {
+            flex: 1,
+            marginTop: StatusBar.currentHeight || 0,
+        },
+        item: {
+            padding: 20,
+            marginVertical: 8,
+            marginHorizontal: 16,
+        },
+        title: {
+            fontSize: 32,
+        },
+    },
+
+    home: {
+        container: {
+            flex: 1,
+        },
+        image: {
+            flex: 1,
+            justifyContent: 'center',
+        },
+        text: {
+            color: 'white',
+            fontSize: 42,
+            lineHeight: 84,
+            fontWeight: 'bold',
+            textAlign: 'center',
+            backgroundColor: '#000000c0',
+        },
+    },
 });

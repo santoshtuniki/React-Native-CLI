@@ -2,10 +2,10 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import HomeScreen from './components/Home';
 import AboutScreen from './components/About';
 import PictureScreen from './components/Pictures';
-import BgScreen from './components/background';
+import HomeScreen from './components/Home';
+import FlatScreen from './components/Flat';
 
 /*
 	createNativeStackNavigator is a function that returns an object containing 2 properties: 
@@ -21,7 +21,7 @@ const App = () => {
 				<Stack.Screen name="Home" component={HomeScreen} />
 				<Stack.Screen name="About" component={AboutScreen} />
 				<Stack.Screen name="Pictures" component={PictureScreen} />
-				<Stack.Screen name="BackgroundImg" component={BgScreen} />
+				<Stack.Screen name="FlatList" component={FlatScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	)
