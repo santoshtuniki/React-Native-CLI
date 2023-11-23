@@ -32,6 +32,12 @@ const styles = StyleSheet.create({
 	},
 	container: {
 		flexDirection: 'row',
+	},
+	bg: {
+		width: '90%',
+		height: 300,
+		marginLeft: '5%',
+		marginTop: 20,
 	}
 });
 
@@ -41,7 +47,7 @@ const App = () => {
 	}
 
 	const onPressButton = () => {
-		Alert.alert('GURRR...')
+		Alert.alert('GURRR....')
 	}
 
 	return (
@@ -88,6 +94,12 @@ const App = () => {
 						style={styles.icon} />
 				</TouchableHighlight>
 			</View>
+
+			<ImageBackground source={require('./images/1.jpeg')} style={styles.bg}>
+				<Text style={[styles.para, { color: 'red', textAlign: 'center' }]}>
+					NATIONAL ANIMAL
+				</Text>
+			</ImageBackground>
 		</View>
 	);
 };
