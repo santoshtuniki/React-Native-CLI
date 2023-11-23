@@ -47,8 +47,8 @@ const PictureScreen = ({ navigation }) => {
 
             <View style={{ marginTop: 40 }}>
                 <Button
-                    title='Return Home'
-                    onPress={() => navigation.navigate('Home')}
+                    title='Next'
+                    onPress={() => navigation.navigate('BackgroundImg')}
                 />
             </View>
 
@@ -59,21 +59,10 @@ const PictureScreen = ({ navigation }) => {
                     onPress={() => navigation.goBack()}
                 />
             </View>
-
-            <View style={{ marginTop: 40 }}>
-                <Button
-                    title='Go back to first screen'
-                    onPress={() => navigation.popToTop()}
-                />
-            </View>
         </View >
     )
 }
 
 export default PictureScreen;
 
-/*
-    navigation.goBack()     -->     to return to "previous screen".
-
-    navigation.popToTop()   -->     to return to "first screen" at the top of the stack.
-*/
+//  navigation.goBack()     -->     to return to "previous screen".
