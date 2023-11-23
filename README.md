@@ -40,3 +40,22 @@
 			"react"
 		]
 	};
+
+
+##### Most important files/folders:
+
+	1.	package.json
+
+	2.	metro.config.js
+
+	3.	babel.config.js
+
+	4.	index.js
+
+	5.	app.tsx
+
+	6.	.eslintrc.js
+
+	7.	ios and android folders
+
+#####
